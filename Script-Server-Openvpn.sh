@@ -53,7 +53,7 @@ ca ca.crt
 cert server.crt
 key server.key
 dh dh.pem
-server 10.8.0.0 255.255.255.0
+server 192.168.60.131 255.255.255.0
 ifconfig-pool-persist ipp.txt
 push "redirect-gateway def1 bypass-dhcp"
 push "dhcp-option DNS 8.8.8.8"
@@ -74,7 +74,7 @@ sysctl -p
 
 # Configure iptables for NAT
 echo "Configuring iptables for NAT..."
-iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -s 192.168.60.131/24 -o eth0 -j MASQUERADE
 iptables-save > /etc/iptables/rules.v4
 
 # Enable and start OpenVPN service
