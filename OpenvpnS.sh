@@ -31,7 +31,7 @@ cert /etc/openvpn/easy-rsa/pki/issued/server.crt
 key /etc/openvpn/easy-rsa/pki/private/server.key
 dh /etc/openvpn/easy-rsa/pki/dh.pem
 server 10.8.0.0 255.255.255.0
-ifconfig 192.168.3.131 255.255.255.0
+ifconfig 192.168.2.236 255.255.255.0
 push "redirect-gateway def1"
 push "dhcp-option DNS 8.8.8.8"
 push "dhcp-option DNS 8.8.4.4"
